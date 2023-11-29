@@ -20,7 +20,7 @@ student_grades = {
 for i in student_grades:
     print(i , student_grades[i], sep=', ' )
 '''
-
+'''
 students = [
     {"name": "Hermoine", "house": "Gryffindor", "patronus": "Otter"},
     {"name": "Harry", "house": "Gryffindor", "patronus": "Stag"},
@@ -31,3 +31,33 @@ students = [
 for i in students:
     print( i['name'], i['house'], sep=', ')
 
+'''
+
+#print rows
+'''
+def main():
+    rows(4)
+    columns(7)
+
+def rows(width):
+    print('??  ' * width)
+
+def columns(height):
+    for _ in range(height):
+     print('CC  cc')
+
+main()
+'''
+
+#print a square
+def main():
+    square_size = int(input('How big is the square??'))
+    print_square(square_size)
+
+def print_square(size):
+    for i in range(size):
+        for k in range(size):
+            print('#', end='')
+        print()
+
+main()
