@@ -51,6 +51,7 @@ print(f'x is {x}')
 
 
 #main function
+'''
 def main():
     x =  get_int()
     print(f'x is {x}')
@@ -66,4 +67,47 @@ def get_int():
     return x  
   
 
+main()
+'''
+
+
+'''
+def main():
+    x =  get_int()
+    print(f'x is {x}')
+
+
+def get_int():
+    while True:
+        try:
+            x = int(input('What is X??'))
+            return x
+            break
+        except ValueError:
+            print('Invaliddd Input')  
+
+  
+
+main()
+'''
+
+
+
+
+# pass the error message
+#avoid boring error message
+def main():
+    x =  get_int()
+    print(f'x is {x}')
+
+
+def get_int():
+    while True:
+        try:
+            x = int(input('What is X?? '))
+            return x
+            break
+        except ValueError:
+           # print('Invaliddd Input')  
+           pass
 main()
