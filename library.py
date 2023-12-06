@@ -65,14 +65,26 @@ print('Hello, My name is ', sys.argv[1])
 
 #packages
 # run in terminal 'pip install cowsay'
+'''
 import cowsay
 import sys
-'''
 if len(sys.argv) == 2:
     cowsay.cow("hello, " + sys.argv[1])
+if len(sys.argv) == 2:
+    cowsay.trex("hello, " + sys.argv[1])
 '''
 
 
 
-if len(sys.argv) == 2:
-    cowsay.trex("hello, " + sys.argv[1])
+#API - Application programming interface
+#pip install requests
+import json
+import requests
+import sys
+
+if len(sys.argv) != 2:
+    sys.exit()
+
+response = requests.get("https://itunes.apple.com/search?entity=song&limit=1&term=" + sys.argv[1])
+
+print(json.dumps(response.json(), indent=2))
